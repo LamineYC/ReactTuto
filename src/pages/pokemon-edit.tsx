@@ -12,7 +12,7 @@ const PokemonEdit: FunctionComponent<RouteComponentProps<Params>> = ({ match }) 
     
   const [pokemon, setPokemon] = useState<Pokemon|null>(null);
   
-  // 22) suite) à l'interieur du useEffect nous utilision la constante en dur POKEMONS. Ce code a été mis en commentaire puis nous écrit une requête permettant d'éditer les données d'un seul pokémon
+  // 22) suite) à l'interieur du useEffect nous utilisions la constante en dur POKEMONS. Ce code a été mis en commentaire puis nous écrit une requête permettant d'éditer les données d'un seul pokémon
       // 23) On supprime la méthode fetch (mis en commentaire) pour utiliser directement la classe pokemon-service après importation
 
   useEffect(() => {

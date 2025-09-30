@@ -57,7 +57,7 @@ const PokemonForm: FunctionComponent<Props> = ({pokemon, isEditForm}) => {
   }
    
 
-  // 18) suite) On crée une nouvelle méthode selectType qui prend en charge la le champ des types pour qu'on puisse récupérer les types cochés dans le state
+  // 18) suite) On crée une nouvelle méthode selectType qui prend en charge le champ des types pour qu'on puisse récupérer les types cochés dans le state
   const selectType = (type: string, e: React.ChangeEvent<HTMLInputElement>): void => {
     const checked = e.target.checked;
     let newField: Field;
@@ -77,7 +77,7 @@ const PokemonForm: FunctionComponent<Props> = ({pokemon, isEditForm}) => {
 
 
   // 18) On crée une nouvelle méthode  qui permettra de prendre en compte dans le state les modifications de notre formulaire
-        // 18) On applique ensuite les changements dans les propriétés du DOM virtuel. Plus précisément n ajoute l'attribut name="name" aux inputs dans les parties pokemon name pokemon hp et pokemon cp puis sur la même ligne on ajoute l'événement onChange
+        // 18) On applique ensuite les changements dans les propriétés du DOM virtuel. Plus précisément on ajoute l'attribut name="name" aux inputs dans les parties pokemon name pokemon hp et pokemon cp puis sur la même ligne on ajoute l'événement onChange
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
      const fieldName: string = e.target.name;
      const fieldValue: string = e.target.value;
@@ -189,7 +189,7 @@ const PokemonForm: FunctionComponent<Props> = ({pokemon, isEditForm}) => {
     }
   }
 
-  // 31) Déxlaration de addPokemon pour l'ajout; et de updatePokemon pour l'édition
+  // 31) Déclaration de addPokemon pour l'ajout; et de updatePokemon pour l'édition
     const addPokemon = () => {
       PokemonService.addPokemon(pokemon).then(() => history.push(`/pokemons`));
     }

@@ -13,7 +13,7 @@ const PokemonsDetail: FunctionComponent<RouteComponentProps<Params>> = ({ match 
     
   const [pokemon, setPokemon] = useState<Pokemon|null>(null);
  
-  // 22) suite) à l'interieur du useEffect nous utilision la constante en dur POKEMONS. Ce code a été mis en commentaire puis nous écrit une requête permettant de récupérer les données d'un seul pokémon
+  // 22) suite) à l'interieur du useEffect nous utilisions la constante en dur POKEMONS. Ce code a été mis en commentaire puis nous avons écrit une requête permettant de récupérer les données d'un seul pokémon
         // 23) On supprime la méthode fetch (mis en commentaire) pour utiliser directement la classe pokemon-service après importation
 
   useEffect(() => {
@@ -33,7 +33,7 @@ const PokemonsDetail: FunctionComponent<RouteComponentProps<Params>> = ({ match 
 
 
   }, [match.params.id]);
-    // ajout du bouton d'édition de formulaire à la ligne après l'image du pokemon (L31 à L33)
+    // ajout du bouton d'édition de formulaire à la ligne après l'image du pokemon
   return (
     <div>
       { pokemon ? (

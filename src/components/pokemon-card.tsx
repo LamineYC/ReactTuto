@@ -9,11 +9,11 @@ import { useHistory } from 'react-router-dom'; // 15) importation du hook useHis
 // 2) on déclare un nouveau type (Props) pour typescript. ce type contient un objet pokemon
 type Props = { 
   pokemon: Pokemon,
-  borderColor?: string // 5) ajout d'une prop facultative (grâce au point d'interrogation) dans notre composant pokemonCard
+  borderColor?: string // 5) ajout d'une prop facultative (grâce au point d'interrogation) dans notre composant pokemonCard puis prise en compte dans le return
 };
 
 // 3) On lie notre type Props à notre propiété d'entrée
-const PokemonCard: FunctionComponent<Props> = ({pokemon, borderColor = '#009688'}) => {  // 5) définition d'une la valeur par défaut (ici couleur verte) de notre prop borderColor (ainsi si la prop est passée par un composant parent cela écrase la valeur par défaut donnée; sinon elle est prise en compte). On utilise ici ECMAScript 6
+const PokemonCard: FunctionComponent<Props> = ({pokemon, borderColor = '#009688'}) => {  // 5) définition d'une valeur par défaut (ici couleur verte) de notre prop borderColor (ainsi si la prop est passée par un composant parent cela écrase la valeur par défaut donnée; sinon elle est prise en compte). On utilise ici ECMAScript 6
 
 // 7) On définit l'état du composant pour stocker la couleur actuelle de la bordure puis dans la 1ère ligne du return on ajoute 2 gestionnaires d'événements showBorder et hideBorder
     const [color, setColor] = useState<string>();
